@@ -1,7 +1,12 @@
-# Telegram-Session-Hijacking
-A simple Telegram (Web / Desktop) session hijacker using Powershell
+# Telegram-Session-Hijacker
+This project has two parts : 
+1. Telegram Desktop session hijacking
+2. Telegram Web session hijacking
 
-## Requirements:
+For now, this project is written in PowerShell. I may rewrite it in other languages in the future.
+
+
+## Requirements
 * Works on **Powershell version 3**
 * You need to have a **GitHub account** and a **GitHub API key**
 
