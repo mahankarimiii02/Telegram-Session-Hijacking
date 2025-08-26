@@ -1,4 +1,4 @@
-﻿Add-Type -TypeDefinition @"
+Add-Type -TypeDefinition @"
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -62,7 +62,7 @@ function Invoke-GitHubWinInetUpload {
     if ($hRequest -eq [IntPtr]::Zero) {
         [WinInet]::InternetCloseHandle($hConnect)
         [WinInet]::InternetCloseHandle($hInternet)
-        Write-Error "Failed to create HTTP request"
+        
         return $null
     }
 
@@ -104,11 +104,7 @@ function Invoke-GitHubWinInetUpload {
     [WinInet]::InternetCloseHandle($hConnect)
     [WinInet]::InternetCloseHandle($hInternet)
 
-    return @{
-        Success = $success
-        Content = $responseContent
-        ErrorCode = if (-not $success) { $errorCode } else { $null }
-    }
+   
 }
 
 
@@ -179,12 +175,6 @@ foreach ($fileInfo in $filesToUpload) {
                     $jsonBody = $body | ConvertTo-Json -Depth 10
                     $result = Invoke-GitHubWinInetUpload -Uri $fileUri -Token $token -JsonBody $jsonBody
                     
-                    if ($result.Success) {
-                        Write-Host "Successfully uploaded: $fileRemotePath" -ForegroundColor Green
-                    } else {
-                        Write-Host "Failed to upload: $fileRemotePath" -ForegroundColor Red
-                        Write-Host "Error: $($result.Content)" -ForegroundColor Red
-                    }
                 }
             }
             else {
@@ -199,23 +189,16 @@ foreach ($fileInfo in $filesToUpload) {
                 }
 
            
-
                 $jsonBody = $body | ConvertTo-Json -Depth 10
                 $result = Invoke-GitHubWinInetUpload -Uri $uri -Token $token -JsonBody $jsonBody
                 
-                if ($result.Success) {
-                    Write-Host "Successfully uploaded: $remotePath" -ForegroundColor Green
-                } else {
-                    Write-Host "Failed to upload: $remotePath" -ForegroundColor Red
-                    Write-Host "Error: $($result.Content)" -ForegroundColor Red
-                }
             }
         }
         catch {
-            Write-Error "Error uploading $filepath : $($_.Exception.Message)"
+            
         }
     }
     else {
-        Write-Warning "Path not found: $filepath"
+        
     }
 }
