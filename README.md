@@ -7,8 +7,8 @@ For now, this project is written in PowerShell. I may rewrite it in other langua
 
 
 ## Requirements
-* Works on **Powershell version 3**
-* You need to have a **GitHub account** and a **GitHub API key**
+* Works on **Powershell version 3+**
+* You need to have a **GitHub Account** and also **GitHub API Key**
 
 ## Warning 
-This project is for **educational purposes** only. Any abuse of this project is not my responsibility and is taken at your own risk.
+This project is for **Educational Purposes Only**. Any abuse of this project is not my responsibility and is taken at your own risk.
