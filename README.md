@@ -1,7 +1,7 @@
 # Telegram-Session-Hijacker
 This project has two parts : 
-1. Telegram Desktop session hijacking
-2. Telegram Web session hijacking
+1. Telegram Desktop session hijacker
+2. Telegram Web session hijacker
 
 For now, this project is written in PowerShell. I may rewrite it in other languages in the future.
 
