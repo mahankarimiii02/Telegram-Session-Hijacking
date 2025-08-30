@@ -1,6 +1,6 @@
 # Introducation 
-As you may know your Telegram Desktop has a tdata folder (can be find in installation path) witch datas are saved.
-Ofcourse that datas are encrypted and for reading them we need to decrypt them using Telegram Keys ... but what if we don't want to read any file and just get the session? The intersting part is that for getting access to an account you won't need to decrypt anything ... the only thing you want is to have the tdata folder  
+As you may know Telegram Desktop has a tdata folder (can be find in installation path) witch datas are saved.
+Ofcourse that datas are encrypted with Telegram keys ... good news is that for doing a session hijack we just need to have some files, not to decrypt them :) 
 
 
 # How Does it work? 
@@ -11,6 +11,7 @@ Ofcourse that datas are encrypted and for reading them we need to decrypt them u
   3. session related file
   
 * It uses **wininet.dll** for creating an internet connection
+
 
 
 
