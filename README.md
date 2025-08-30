@@ -1,4 +1,4 @@
-# Telegram-Session-Hijacker
+# Telegram Session Hijacker
 This project has two parts : 
 1. Telegram Desktop session hijacker
 2. Telegram Web session hijacker
