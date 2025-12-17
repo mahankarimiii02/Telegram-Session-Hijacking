@@ -12,6 +12,7 @@ For now, this project is written in PowerShell. I may rewrite it in other langua
 notice that :
 1. In both versions we use **wininet.dll** for creating the connection
 2. The Chrome Local Storage is a temporary memory, so before using the Web version make sure that the target system has been used telegram web recently
+3. This is a session hijacker, not a session decrypter. So if the session uses Local Passcode, you should use **tdata decrypters** after you get the session file. They can be find by a simple search in github
 
 ## Requirements
 * Works on **Powershell version 3+**
